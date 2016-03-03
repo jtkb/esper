@@ -17,8 +17,8 @@ import java.util.Random;
 
 /**
  * <p>
- * Count–min sketch (or CM sketch) is a probabilistic sub-linear space streaming algorithm
- * (source: Wikipedia, see http://en.wikipedia.org/wiki/Count%E2%80%93min_sketch)
+ * Countï¿½min sketch (or CM sketch) is a probabilistic sub-linear space streaming algorithm
+ * (source: Wikipedia, see https://en.wikipedia.org/wiki/Count-min_sketch)
  * </p>
  *
  * <p>

@@ -1,13 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<name>Esper</name>
-	<groupId>com.espertech</groupId>
+	<groupId>com.javatechnics.com.espertech</groupId>
 	<artifactId>esper</artifactId>
 	<version>5.3.0</version>
 	<packaging>jar</packaging>
 	<inceptionYear>2005</inceptionYear>
 	<url>http://www.espertech.com/esper</url>
-	<description>Complex event processing and event series analysis component</description>
+	<description>Complex event processing and event series analysis component. This is an unofficial modified release of the library
+        which includes some fixes not made into the official library of sasme version. This unofficial release is identified by the group id of
+        com.javatechnics.com.espertech.</description>
 	<licenses>
 		<license>
 			<name>GNU General Public License Version 2</name>
@@ -21,17 +23,15 @@
 		<connection>scm:git:git@github.com:espertechinc/esper.git</connection>
 	</scm>
 	<distributionManagement>
-		<snapshotRepository>
-			<id>sonatype-nexus-snapshots</id>
-			<name>Sonatype Nexus snapshot repository</name>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-		<repository>
-			<id>sonatype-nexus-staging</id>
-			<name>Sonatype Nexus release repository</name>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-	</distributionManagement>
+            <repository>
+                <id>${repo.name}</id>
+                <url>${repo.url}</url>
+            </repository>
+            <snapshotRepository>
+                <id>${repo.name}</id>
+                <url>${repo.url}</url>
+            </snapshotRepository>
+        </distributionManagement>
 	<developers>
 		<developer>
 			<id>espertech</id>
@@ -41,6 +41,11 @@
 			<organization>EsperTech</organization>
 			<organizationUrl>http://www.espertech.com</organizationUrl>
 		</developer>
+                <developer>
+                    <id>javatechnics</id>
+                    <name>Java Technics</name>
+                    <email>contact@AvionicEngineers.com</email>
+                </developer>
 	</developers>
 	<dependencies>
 		<dependency>
@@ -169,7 +174,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+<!--			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
 				<version>1.5</version>
@@ -185,7 +190,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>-->
 		</plugins>
 		<testResources>
 			<testResource>
